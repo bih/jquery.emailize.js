@@ -13,3 +13,6 @@ $(document).ready(function(){
 	$("<email>").emailize();
 });
 ```
+
+# Example
+Click [here to view an example.](http://bih.github.io/jquery.emailize.js)
