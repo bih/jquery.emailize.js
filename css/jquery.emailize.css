@@ -1,0 +1,74 @@
+body {
+	margin: 0 auto;
+	width: 750px;
+
+	font-family: 'Helvetica Neue', 'Times New Roman', 'Arial';
+	font-size: 20px;
+	font-weight: 200;
+}
+
+h1, h2 { font-weight: 200; }
+h1 { font-size: 38px; color: blue; }
+h2 { font-size: 20px; }
+
+hr {
+	margin: 30px 0;
+	border: 0;
+	border-bottom: 5px solid blue;
+}
+
+#field {
+	padding: 12px 5px;
+}
+
+#field label {
+	display: inline-block;
+	min-width: 200px;
+}
+
+#field label span {
+	padding: 2px 5px;
+	margin-left: 2px;
+	position: relative;
+	top: -3px;
+	font-size: 8px;
+	text-transform: uppercase;
+	background: #aaa;
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid #777;
+}
+
+#field input {
+	/* Minimal improvements. */
+	padding: 10px;
+	font-family: 'Helvetica Neue', 'Times New Roman', 'Arial';
+	font-size: 15px;
+	font-weight: 200;
+	width: 500px;
+	color: #333;
+}
+
+footer {
+	font-size: 14px;
+	padding: 40px 0;
+}
+
+/* You only need this one if you're implementing this in your website, really. */
+.emailize {
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 10px;
+	font-size: 15px;
+	width: 502px;
+	height: 20px;
+	color: #333;
+}
+
+.emailize * {
+	display: inline-block !important;
+}
+
+.emailize span.autocomplete {
+	color: #ccc;
+}

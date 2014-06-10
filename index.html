@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>jquery.emailize.js</title>
+	<link rel="stylesheet" href="css/jquery.emailize.css" type="text/css" />
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.emailize.js"></script>
+</head>
+<body>
+	
+	<div id="container">
+		<h1>emailize.js</h1>
+		<h2>This is a prototype of <a href='http://bilaw.al/improving-email-address-input' target='_blank'>improving email address input</a> when you're entering it in websites. Kind of an obvious UX improvement, but I'm yet to see it appear anywhere so I decided to build something to prove how it could be used in real websites.</h2>
+
+		<H2>Example: Enter an email address. Second box is emailized. Try emailize@gmail.com</H2>
+
+		<hr />
+
+		<div id="field"><label>Email address <span>OLD</span></label> <input type="text" /></div>
+		<div id="field"><label>Email address <span>NEW</span></label> <email></email></div>
+
+		<footer>An experiment built in Mountain View, CA by <a href='http://github.com/bih/jquery.emailize.js'>Bilawal Hameed</a>.</footer>
+	</div>
+
+<script>
+$(document).ready(function(){
+	$("email").emailize();
+});
+</script>
+</body>
+</html>
