@@ -7,7 +7,8 @@ It is up to you whether you'd like to use it in production. I would <3 contribut
 # How to use
 You need jQuery. After you need to include the `jquery.emailize.js` and `jquery.emailize.css` into your webpage.
 
-To call emailize on a <div> element (or a generic <email> element as we have done in the example) run this before your </body> tag
+To call emailize on a `<div>` element (or a generic `<email>` element as we have done in the example) run this before your `</body>` tag
+
 ```
 $(document).ready(function(){
 	$("<email>").emailize();
