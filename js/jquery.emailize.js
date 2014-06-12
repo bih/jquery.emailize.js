@@ -79,22 +79,27 @@ $(document).ready(function(){
 
 		// On enter, let's autocomplete.
 		$(document).keypress(function(e) {
-			if(_focus == true && e.keyCode == 13 && last_autocomplete.length > 0) {
+			if(_focus == true && e.keyCode == 13) {
 				e.preventDefault();
 
-				// Append text to subject and destroy autocomplete in DOM.
-				_subject.append(last_autocomplete).find('span.autocomplete').remove();
+				if(last_autocomplete.length > 0) {
+					// Append text to subject and destroy autocomplete in DOM.
+					_subject.append(last_autocomplete).find('span.autocomplete').remove();
 
-				// Point cursor to end of field
-				var range, selection;
-				_val = _subject.text();
-				range = document.createRange();
-				range.selectNodeContents(_subject[0]);
-				range.collapse(false);
+					// Empty last autocomplete
+					last_autocomplete = "";
 
-				selection = window.getSelection();
-				selection.removeAllRanges();
-				selection.addRange(range);
+					// Point cursor to end of field
+					var range, selection;
+					_val = _subject.text();
+					range = document.createRange();
+					range.selectNodeContents(_subject[0]);
+					range.collapse(false);
+
+					selection = window.getSelection();
+					selection.removeAllRanges();
+					selection.addRange(range);
+				}
 			}
 		});
 
