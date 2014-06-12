@@ -11,7 +11,7 @@ To call emailize on a `<div>` element (or a generic `<email>` element as we have
 
 ```
 $(document).ready(function(){
-	$("<email>").emailize();
+	$("email").emailize();
 });
 ```
 
