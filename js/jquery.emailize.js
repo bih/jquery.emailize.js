@@ -78,9 +78,11 @@ $(document).ready(function(){
 		$(this).blur(function(){ _focus = false; });
 
 		// On enter, let's autocomplete.
-		$(document).keypress(function(e) {
-			if(_focus == true && e.keyCode == 13) {
-				e.preventDefault();
+		$(document).keydown(function(e) {
+			if(_focus == true && (e.keyCode == 13 || e.keyCode == 39)) {
+				if (e.keyCode == 13) {
+					e.preventDefault();
+				}
 
 				if(last_autocomplete.length > 0) {
 					// Append text to subject and destroy autocomplete in DOM.
